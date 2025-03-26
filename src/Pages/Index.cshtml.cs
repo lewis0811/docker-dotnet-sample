@@ -17,7 +17,8 @@ public class IndexModel : PageModel
 
         public void OnGet()
         {
-            var s =_context.Students?.Where(d=>d.ID==1).FirstOrDefault();
+        var s =_context.Students?.Where(d=>d.ID==1).FirstOrDefault();
+        //var s = new {FirstMidName = "a", LastName = "b" };
             this.StudentName = $"{s?.FirstMidName} {s?.LastName}";
         }
     }
